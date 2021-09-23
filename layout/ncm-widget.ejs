@@ -1,29 +1,31 @@
-<div id="ncm-root">
-    <div id="ncm-switch">
-        <div id="ncm-player-btn" class="active">唱片机</div>
-        <div id="ncm-list-btn">歌单</div>
-    </div>
-    <audio id="ncm-audio"></audio>
-    <div id="ncm-player-widget" class="ncm-player-widget active-widget">
-        <div class="ncm-cover-background">
-            <div id="ncm-cover-img">
-                <div id="ncm-cover-hole">
-                </div>
-                <div id="ncm-control" data-state="stop">
-                </div>
-            </div>
-            <div id="ncm-info"></div>
+<% if(config.enable){ %> 
+    <div id="ncm-root">
+        <div id="ncm-switch">
+            <div id="ncm-player-btn" class="active">唱片机</div>
+            <div id="ncm-list-btn">歌单</div>
         </div>
+        <audio id="ncm-audio"></audio>
+        <div id="ncm-player-widget" class="ncm-player-widget active-widget">
+            <div class="ncm-cover-background">
+                <div id="ncm-cover-img">
+                    <div id="ncm-cover-hole">
+                    </div>
+                    <div id="ncm-control" data-state="stop">
+                    </div>
+                </div>
+                <div id="ncm-info"></div>
+            </div>
+        </div>
+        <ul id="ncm-list-widget" class="ncm-list-widget" data-ablum="<%= config.playlist_id %>">
+            <% if(!data){ %>
+                <li id="ncm-list-item" style="color: red;">没有找到相关歌单</li>
+            <% }else{ %> 
+                <% data.map((item, key) => { %>
+                    <li id="ncm-list-item" data-id="<%= item.id %>" data-name="<%= item.name %>" data-imgUrl="<%= item.al.picUrl %>" data-musicUrl="<%= item.musicUrl %> ">
+                        <%= item.name %> - <%= item.ar[0].name %> 
+                    </li>
+                <% }) %> 
+            <% } %> 
+        </ul>
     </div>
-    <ul id="ncm-list-widget" class="ncm-list-widget" data-ablum="<%= config.playlist_id %>">
-        <% if(!data){ %>
-            <li id="ncm-list-item" style="color: red;">没有找到相关歌单</li>
-        <% }else{ %> 
-            <% data.map((item, key) => { %>
-                <li id="ncm-list-item" data-id="<%= item.id %>" data-name="<%= item.name %>" data-imgUrl="<%= item.al.picUrl %>" data-musicUrl="<%= item.musicUrl %> ">
-                    <%= item.name %> - <%= item.ar[0].name %> 
-                </li>
-            <% }) %> 
-        <% } %> 
-    </ul>
-</div>
+<% } %> 
