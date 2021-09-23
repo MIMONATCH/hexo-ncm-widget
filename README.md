@@ -1,7 +1,7 @@
 # hexo-ncm-widget Netease Cloud Music Hexo插件
 Netease Cloud Widget / 网易云音乐Hexo插件 - ncm music widget 🎵
 
-https://img.shields.io/github/package-json/v/MIMONATCH/hexo-ncm-widget?style=flat-square
+![GitHub package.json version](https://img.shields.io/github/package-json/v/MIMONATCH/hexo-ncm-widget?style=flat-square)![npm](https://img.shields.io/npm/v/hexo-ncm-widget?style=flat-square)
 
 添加一个网易云音乐小组件到你的hexo博客
 
