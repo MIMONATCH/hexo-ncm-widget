@@ -1,0 +1,182 @@
+#ncm-root{
+    font-size: 15px
+    width: 100%
+}
+
+#ncm-switch{
+    width: 100%
+}
+
+#ncm-switch div{
+    color: #259DD4;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;   
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    width: 48%
+}
+
+#ncm-switch div:hover{
+    border-bottom: 2px solid #FF4A57;  
+}
+
+#ncm-switch div.active{
+    border-bottom: 2px solid #FF4A57;    
+}
+
+.ncm-player-widget{
+    position: relative;
+    padding: 1em;
+    display: none;
+    text-align: center;
+}       
+        
+.ncm-cover-background{
+    background: url(https://static.xiaoblogs.cn/img/ablum2.png) no-repeat;
+    background-position: center;
+    background-size: 90%;
+    height: 12em;
+    width: 12em; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    animation route 10s infinite linear;
+    -webkit-animation: route 10s infinite linear;
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+#ncm-info{
+    display: none
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    color: #FF4A4A;    
+}
+            
+#ncm-cover-img{
+    border-radius: 50%;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: inherit;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+                
+        
+#ncm-cover-hole{
+    height: 20%;
+    width: 20%;
+    border-radius: 50%;
+    background-color: white;
+}
+                    
+
+#ncm-control{
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0%;
+    height: 4em;
+    width: 4em;
+    background-position: center;
+    background-size: 100%;
+    background-image: url(https://static.xiaoblogs.cn/img/play2.png)
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ncm-control:hover{
+    animation showup 1s linear;
+    -webkit-animation: showup 1s linear;
+    opacity: 90%;
+    box-shadow: 1px 1px 2px 3px #FFCFAA;
+}
+
+.ncm-list-widget{
+    display: none
+    height: 12em;
+    width: 12em; 
+    list-style-type:none;
+    padding: 1em;
+    overflow-y: auto;   
+    color: #259DD4;
+    
+}
+
+#ncm-list-item{
+    font-size: 0.9em
+    padding: 1em 1em 0 1em;
+}
+
+#ncm-list-item:hover{
+    color: #FFC01D; 
+    cursor: pointer;   
+}
+
+@keyframes route{
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
+            
+@-webkit-keyframes route{
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}
+
+@keyframes showup{
+    from {opacity: 0%;}
+    to {opacity: 90%;}
+}
+            
+@-webkit-keyframes showup{
+    from {opacity: 0%;}
+    to {opacity: 90%;}
+}
+
+.widget-animation-play{
+    animation-play-state: running;
+    -webkit-animation-play-state:running;    
+}
+
+.active-widget{
+    display: block;
+}
+
+@media screen and (min-width 680px) and (max-width 1180px){
+    .ncm-cover-background{
+        width: 11em;
+        height: 11em;    
+    }
+    .ncm-list-widget{
+        width: 11em;
+        height: 11em;   
+    }
+    #ncm-control{
+        width: 3em;
+        height: 3em;    
+    }
+}
+
+@media screen and (max-width 680px){  
+    .ncm-cover-background{
+        width: 10em;
+        height: 10em;    
+    }
+    .ncm-list-widget{
+        height: 10em;   
+    } 
+    #ncm-control{
+        width: 2em;
+        height: 2em;    
+    }
+}
+        

@@ -1,0 +1,11 @@
+{
+  "name": "hexo-ncm-widget",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/MIMONATCH/hexo-ncm-widget.git",
+  "author": "midou",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.4"
+  }
+}
