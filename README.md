@@ -40,7 +40,15 @@ ncm_widget:
   playlist_id: '6980995853'  # playlist id 歌单id 需要在''中
 ```
 
-3. 最后生成网站
+3. 使用ncm组件helper函数
+
+```ejs
+<%- ncmWidget() %>
+```
+
+PS. **上面的代码添加进你的主题中**
+
+4. 最后生成网站
 
 ```sh
 hexo clean && hexo g
